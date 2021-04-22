@@ -30,24 +30,30 @@ li a {
   padding: 20px 20px;
   text-decoration: none;
 }
+li a:hover {
+  background-color: white;
+  color: rgb(95, 15, 55);
+  border-radius: 50px;
+}
 
 /*====> div <====*/
 #navbar {
   /* border-left: 7px solid rgb(0, 0, 0); */
   border-bottom: 7px solid rgb(0, 0, 0);
-  border-top: 7px solid rgb(255,255 ,255);
+  border-top: 7px solid rgb(255, 255, 255);
   background-color: rgb(95, 15, 55);
   border-radius: 50px;
   padding: 10px;
   display: flex;
   justify-content: space-around;
 }
-#rNavbar{
+#rNavbar {
   position: relative;
 }
+
 #divwelcom {
   border-bottom: 7px solid rgb(0, 0, 0);
-  border-top: 7px solid rgb(255,255 ,255);
+  border-top: 7px solid rgb(255, 255, 255);
   border-radius: 50px;
   color: rgb(255, 255, 255);
   background-color: rgb(95, 15, 55);
@@ -56,71 +62,83 @@ li a {
   margin-left: 10%;
   text-align: center;
 }
- 
+
 /* ====> quiz page <==== */
+
+.main{
+  text-align: center;
+  margin-top: 50px;
+}
 /* ====> div <==== */
-#main{
-    text-align: center;
-    margin-top: 50px;
+#dpage {
+  margin: 5%;
+  display: block;
+  text-align: center;
 }
-
-#page{
-   margin:  5%;
-    display: block;
-    text-align: center;
+#danswers {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  margin: 10%;
 }
-#answers{
-    display: grid;
-    grid-template-columns: 2fr 2fr;
-    margin: 10%;
-
+.answer {
+  height: 100px;
+  width: 200px;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 7px solid #000;
+  border-top: 7px solid rgb(95, 15, 55);
+  padding: 20px;
+  display: flex;
+  font-size: 30px;
+  border-radius: 50px;
+  font-weight: bold;
 }
-.answer{
-    height: 100px;
-    width: 200px;
-    background-color: rgb(255, 255, 255);
-    border-bottom:7px solid #000;
-    border-top: 7px solid rgb(95, 15, 55);
-    padding: 20px;
-    display: flex;
-    font-size: 30px;
-    border-radius: 50px;
-    font-weight: bold;
+#a {
+  margin: 20px;
 }
-#a{
-    margin: 20px;
+#b {
+  margin: 20px;
 }
-#b{
-    margin: 20px;
+#c {
+  margin: 20px;
 }
-#c{
-    margin: 20px;
+#d {
+  margin: 20px;
 }
-#d{
-    margin: 20px;
-}
-#question{
-
+#dquestion {
 }
 /* ====> p && button <====*/
-p{
-    background-color: rgb(95, 15, 55);
-    border-radius: 50PX;
-    border-top:7PX solid rgb(255, 255, 255);
-    border-bottom: 7PX solid rgb(0, 0, 0);
-    font-size: 40px;
-    text-align: center;
-    font-weight: bold;
-    color: rgb(255, 255, 255);
-    height: 150px;
+p {
+  background-color: rgb(95, 15, 55);
+  border-radius: 50px;
+  border-top: 7px solid rgb(255, 255, 255);
+  border-bottom: 7px solid rgb(0, 0, 0);
+  font-size: 40px;
+  text-align: center;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  height: 150px;
 }
-button{
-height: 70px;
-width: 200px;
-border-radius:50px ;
-border-bottom :7px solid rgb(0, 0, 0);
-border-top: 7px solid rgb(255, 255, 255);
-font-weight: bold;
-font-size: 20px;
-background-color: rgb(95, 15, 55) ;
+button {
+  height: 70px;
+  width: 200px;
+  border-radius: 50px;
+  border-bottom: 7px solid rgb(0, 0, 0);
+  border-top: 7px solid rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 20px;
+  background-color: rgb(95, 15, 55);
+  margin: 20px;
 }
+input {
+  height: 40px;
+  margin-right: 50px;
+  font-weight: bold;
+  font-size: 20px;
+  border-top: 7px solid rgb(95, 15, 55);
+  border-radius: 50px;
+  border-bottom: 7px solid black;
+}
+
+
+/* ====> create  <==== */
+/* ====> div <==== */
