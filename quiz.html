@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> QUIZ GAME </title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-    <h1>Quiz <font color="red">Game</font></h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Play Quiz</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+      <div id="main">
+    <div>
+      <h1 id="title">
+        <font color="#000">Q</font>uiz <font color="#000">G</font>ame
+      </h1>
+    </div>
     <div id="page">
-        <dive id="question"></dive>
-        <dive id ="answers" >
-            <div id="a" >
-
-            </div>
-            <div id="b" >
-
-            </div>
-            <div id="c" >
-
-            </div>
-            <div id="d" >
-
-            </div>
-        </dive>
-    </div> 
-</body>
+      <dive id="question">
+          <p>Writ Your Question</p>
+      </dive>
+      <dive id="answers">
+        <div id="a" class="answer">Answer a</div>
+        <div id="b" class="answer">Answer b</div>
+        <div id="c" class="answer">Answer c</div>
+        <div id="d" class="answer">Answer d</div>
+      </dive>
+      <div>
+      <button>Next Question</button>
+    </div>
+    </div>
+</div>
+  </body>
 </html>

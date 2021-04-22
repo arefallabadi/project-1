@@ -1,3 +1,4 @@
+/* ====> main page <==== */
 body {
   height: 100%;
   background-color: rgb(54, 58, 58);
@@ -54,4 +55,72 @@ li a {
   height: 80%;
   margin-left: 10%;
   text-align: center;
+}
+ 
+/* ====> quiz page <==== */
+/* ====> div <==== */
+#main{
+    text-align: center;
+    margin-top: 50px;
+}
+
+#page{
+   margin:  5%;
+    display: block;
+    text-align: center;
+}
+#answers{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    margin: 10%;
+
+}
+.answer{
+    height: 100px;
+    width: 200px;
+    background-color: rgb(255, 255, 255);
+    border-bottom:7px solid #000;
+    border-top: 7px solid rgb(95, 15, 55);
+    padding: 20px;
+    display: flex;
+    font-size: 30px;
+    border-radius: 50px;
+    font-weight: bold;
+}
+#a{
+    margin: 20px;
+}
+#b{
+    margin: 20px;
+}
+#c{
+    margin: 20px;
+}
+#d{
+    margin: 20px;
+}
+#question{
+
+}
+/* ====> p && button <====*/
+p{
+    background-color: rgb(95, 15, 55);
+    border-radius: 50PX;
+    border-top:7PX solid rgb(255, 255, 255);
+    border-bottom: 7PX solid rgb(0, 0, 0);
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    height: 150px;
+}
+button{
+height: 70px;
+width: 200px;
+border-radius:50px ;
+border-bottom :7px solid rgb(0, 0, 0);
+border-top: 7px solid rgb(255, 255, 255);
+font-weight: bold;
+font-size: 20px;
+background-color: rgb(95, 15, 55) ;
 }
