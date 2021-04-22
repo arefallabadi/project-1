@@ -1,0 +1,11 @@
+#page{
+    background-color: rgb(0, 38, 255);
+    height: "50px";
+    width: "60px";
+    border-radius: "50px";
+}
+
+h1{
+    display: grid;
+    grid-row-end: auto;
+}
