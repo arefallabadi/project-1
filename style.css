@@ -5,7 +5,7 @@ body {
   background-repeat: no-repeat;
 }
 /* ====> h <==== */
-#title {
+.title {
   color: #ffffff;
   font-size: 35px;
 }
@@ -78,7 +78,7 @@ li a:hover {
 #danswers {
   display: grid;
   grid-template-columns: 2fr 2fr;
-  margin: 10%;
+  margin-left: 15%;
 }
 .answer {
   height: 100px;
@@ -106,7 +106,7 @@ li a:hover {
 }
 #dquestion {
 }
-/* ====> p && button <====*/
+/* ====> p && button for all page <====*/
 p {
   background-color: rgb(95, 15, 55);
   border-radius: 50px;
@@ -116,7 +116,10 @@ p {
   text-align: center;
   font-weight: bold;
   color: rgb(255, 255, 255);
-  height: 150px;
+  height: 130px;
+  margin-left: 10% ;
+  margin-right: 10%;
+  padding-top: 25px;
 }
 button {
   height: 70px;
@@ -137,6 +140,9 @@ input {
   border-top: 7px solid rgb(95, 15, 55);
   border-radius: 50px;
   border-bottom: 7px solid black;
+  border-left: 7px solid white;
+  border-right: 7px solid white ;
+  text-align: center;
 }
 
 
