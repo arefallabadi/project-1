@@ -65,7 +65,7 @@ li a:hover {
 
 /* ====> quiz page <==== */
 
-.main {
+.main{
   text-align: center;
   margin-top: 50px;
 }
@@ -117,7 +117,7 @@ p {
   font-weight: bold;
   color: rgb(255, 255, 255);
   height: 130px;
-  margin-left: 10%;
+  margin-left: 10% ;
   margin-right: 10%;
   padding-top: 25px;
 }
@@ -132,7 +132,7 @@ button {
   background-color: rgb(95, 15, 55);
   margin: 20px;
 }
-input {
+input{
   height: 40px;
   margin-right: 50px;
   font-weight: bold;
@@ -141,9 +141,10 @@ input {
   border-radius: 50px;
   border-bottom: 7px solid black;
   border-left: 7px solid white;
-  border-right: 7px solid white;
+  border-right: 7px solid white ;
   text-align: center;
 }
+
 
 /* ====> create  <==== */
 /* ====> div <==== */

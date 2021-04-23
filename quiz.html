@@ -18,22 +18,46 @@
         </div>
         <div id="page">
           <dive id="dquestion">
-            <p id="q">Writ Your Question</p>
+            <p id="q">The Question</p>
             <button id="dpoint">Your Point</button>
           </dive>
           <dive id="danswers">
-            <div id="a" class="answer">Answer a</div>
-            <div id="b" class="answer">Answer b</div>
-            <div id="c" class="answer">Answer c</div>
-            <div id="d" class="answer">Answer d</div>
+            <div onclick="changeBackG('a')" style="align-items: center;" id="a" class="answer">Answer a</div>
+            <div onclick="changeBackG('b')" style="align-items: center;" id="b" class="answer">Answer b</div>
+            <div onclick="changeBackG('c')" style="align-items: center;" id="c" class="answer">Answer c</div>
+            <div onclick="changeBackG('d')" style="align-items: center;" id="d" class="answer">Answer d</div>
           </dive>
           <div id="dbutton">
-            <input id="inputAn" type="text" placeholder="Enter You Answer" />
-            <button>OK</button>
-            <button>Next Question</button>
+            <input readonly id="inputAn" type="text" placeholder="Enter You Answer" />
+            <!-- <button onclick="inputA()">OK</button> -->
+            <button id="bn" onclick="nextQ()">Next Question</button>
           </div>
         </div>
       </div>
     </div>
+    <script>
+//        q = document.querySelector("#q");
+//  a = document.querySelector("#a");
+//  b = document.querySelector("#b");
+//  c = document.querySelector("#c");
+//  d = document.querySelector("#d");
+
+const q = document.querySelector("#q");
+const a = document.querySelector("#a");
+const b = document.querySelector("#b");
+const c = document.querySelector("#c");
+const d = document.querySelector("#d");
+const bn = document.querySelector("#bn")
+const inputAn = document.querySelector("#inputAn");
+const point = document.querySelector("#dpoint");
+  //     q.innerHTML = "";
+  // q.innerHTML = Object.keys(Q[0]);
+  // a.innerHTML = Q[0][Object.keys(Q[0])];
+  // b.innerHTML = randomAnswerN();
+  // c.innerHTML = randomAnswerN();
+  // d.innerHTML = randomAnswerN();
+   nextQ()
+   
+    </script>
   </body>
 </html>

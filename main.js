@@ -32,57 +32,111 @@ const randomAnswerY = function (array) {
   }
 };
 
-const q = document.querySelector("#q");
-const a = document.querySelector("#a");
-const b = document.querySelector("#b");
-const c = document.querySelector("#c");
-const d = document.querySelector("#d");
 
-let indexQ = 0;
-const play1 = document.querySelector("#aa");
-paly1.addEventListener("click", () => {
-  alert("The Game Will Start");
-});
 
-const play = (Q) => {
-  q.innerHTML = "";
-  q.innerHTML = Object.keys(Q[indexQ]);
-  a.innerHTML = Q[indexQ][Object.keys(Q[indexQ])];
-  b.innerHTML = randomAnswerN();
-  c.innerHTML = randomAnswerN();
-  d.innerHTML = randomAnswerN();
+let indexQ = -1;
+// indexQ += 1;
+const play = () => {
+
+  // q.innerHTML = "";
+  // q.innerHTML = Object.keys(Q[0]);
+  // a.innerHTML = Q[0][Object.keys(Q[0])];
+  // b.innerHTML = randomAnswerN();
+  // c.innerHTML = randomAnswerN();
+  // d.innerHTML = randomAnswerN();
+
 };
+// const inputAn = document.querySelector("#inputAn");
+// const point = document.querySelector("#dpoint");
+let points = 0;
 
-const nextQ = (Q, indexQ) => {
-  indexQ += 1;
-  q.innerHTML = Object.keys(Q[indexQ]);
-  if (indexQ <= 6) {
-    a.innerHTML = Q[indexQ][Object.keys(Q[indexQ])];
-    b.innerHTML = randomAnswerN();
-    c.innerHTML = randomAnswerN();
-    d.innerHTML = randomAnswerN();
+const changeBackG = (string) =>{
+  if(string === "a"){
+    a.style.backgroundColor = "yellow"
+    b.style.backgroundColor = "gray"
+    c.style.backgroundColor = "gray"
+    d.style.backgroundColor = "gray"
+    inputAn.value = a.innerHTML
   }
-  if (indexQ <= Q.length) {
-    a.innerHTML = randomAnswerY();
-    b.innerHTML = randomAnswerY();
-    c.innerHTML = Q[indexQ][Object.keys(Q[indexQ])];
-    d.innerHTML = randomAnswerY();
+  else if(string === "b"){
+    a.style.backgroundColor = "gray"
+    b.style.backgroundColor = "yellow"
+    c.style.backgroundColor = "gray"
+    d.style.backgroundColor = "gray"
+    inputAn.value = b.innerHTML
   }
+  else if(string === "c"){
+    a.style.backgroundColor = "gray"
+    b.style.backgroundColor = "gray"
+    c.style.backgroundColor = "yellow"
+    d.style.backgroundColor = "gray"
+    inputAn.value = c.innerHTML
+  }
+  else if(string === "d"){
+    a.style.backgroundColor = "gray"
+    b.style.backgroundColor = "gray"
+    c.style.backgroundColor = "gray"
+    d.style.backgroundColor = "yellow"
+    inputAn.value = d.innerHTML
+  }
+}
+
+
+const nextQ = () => {
+  // a.style.backgroundColor = "white"
+  // b.style.backgroundColor = "white"
+  // c.style.backgroundColor = "white"
+  // d.style.backgroundColor = "white"
+ 
+//  if(inputA.innerHTML === Q[indexQ][Object.keys(Q[indexQ])]){
+//   points += 1;
+//     point.innerHTML = points;
+//  }
+
+  setTimeout (function(){
+    
+    if(indexQ +1<Q.length ){q.innerHTML = "";
+    indexQ +=1
+    q.innerHTML = Object.keys(Q[indexQ])[0];
+    console.log(q.innerHTML)
+    if (indexQ < 6) {
+      a.innerHTML = Q[indexQ][Object.keys(Q[indexQ])];
+      b.innerHTML = randomAnswerN();
+      c.innerHTML = randomAnswerN();
+      d.innerHTML = randomAnswerN();
+    }
+    if (indexQ <= Q.length && indexQ>6) {
+      a.innerHTML = randomAnswerY();
+      b.innerHTML = randomAnswerY();
+      c.innerHTML = Q[indexQ][Object.keys(Q[indexQ])];
+      d.innerHTML = randomAnswerY();
+    }}
+    else{
+      q.innerHTML = "====> The Game Was End <===="
+      a.innerHTML = "Good Luck";
+      b.innerHTML = "Good Luck";
+      c.innerHTML = "Good Luck";
+      d.innerHTML = "Good Luck";
+      bn.innerHTML = "Good Luck"
+    }
+    
+  },2000)
+  
 
   // for (let i = 0; i < Q.length; i++) {
   //   q.innerHTML = Object.keys(Q[i]);
   //   a.innerHTML = Q[i][Object.keys(Q[i])];
   // }
 };
-const inputAn = document.querySelector("#inputAn");
-const point = document.querySelector("#dpoint");
-let points = 0;
+
 
 const inputA = () => {
-  if (inputAn.innerHTML === Q[indexQ][Object.keys(Q[indexQ])]) {
+  const inputAn = document.querySelector("#inputAn");
+  const point = document.querySelector("#dpoint");
+console.log(inputAn.value)
+  if (inputAn.value == Q[indexQ][Object.keys(Q[indexQ])[0]]) {
+    console.log(points)
     points += 1;
-    point.innerHTML = points;
-  } else {
-    points += 0;
-  }
+    point.innerHTML = points;}
+
 };
