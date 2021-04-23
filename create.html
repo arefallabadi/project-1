@@ -19,15 +19,23 @@
       <div>
         <p>Fill This Information Pleas</p>
         <h1>Write Number Of Question For Your Quiz</h1>
-        <input type="number" placeholder="Enter Number " />
-        <button id="done">Done</button>
+        <input id="inputNumber" type="number" placeholder="Enter Number " />
+        <button onclick="saveNum()" id="done">Done</button>
       </div>
       <div>
-        <h1>Write Your Question</h1>
-        <input type="text" placeholder="Enter Your Question" />
-        <button>Next</button>
+        <h1>Write Your Question & Correct Answer</h1>
+        <input id="newQ" type="text" placeholder="Enter Question" />
+        <input id="correct" type="text" placeholder="Enter Correct Answer" />
+        <button onclick=" addQ()">Next</button>
       </div>
-      <button>Go To Play</button>
+      <button><a style="color: rgb(255, 255, 255) ; text-decoration: none;" href="./quiz.html">Go To Play</a></button>
     </div>
+    <script>
+      const inputNumber = document.querySelector("#inputNumber")  
+const done = document.querySelector("#done")
+const newQ = document.querySelector("#newQ")
+const correct = document.querySelector("#correct")
+const point = document.querySelector("#dpoint");
+    </script>
   </body>
 </html>
