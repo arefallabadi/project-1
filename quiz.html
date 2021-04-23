@@ -8,30 +8,32 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div style="margin: 5%;">
-    <div class="main">
-      <div>
-        <h1 class="title">
-          <font color="#000">Q</font>uiz <font color="#000">G</font>ame
-        </h1>
-      </div>
-      <div id="page">
-        <dive id="dquestion">
-          <p id="q" >Writ Your Question</p>
-        </dive>
-        <dive id="danswers">
-          <div id="a" class="answer">Answer a</div>
-          <div id="b" class="answer">Answer b</div>
-          <div id="c" class="answer">Answer c</div>
-          <div id="d" class="answer">Answer d</div>
-        </dive>
-        <div id="dbutton">
-          <input type="text" placeholder="Enter You Answer"  />
-          <button>OK</button>
-          <button>Next Question</button>
+    <script src="main.js"></script>
+    <div style="margin: 5%">
+      <div class="main">
+        <div>
+          <h1 class="title">
+            <font color="#000">Q</font>uiz <font color="#000">G</font>ame
+          </h1>
+        </div>
+        <div id="page">
+          <dive id="dquestion">
+            <p id="q">Writ Your Question</p>
+            <button id="dpoint">Your Point</button>
+          </dive>
+          <dive id="danswers">
+            <div id="a" class="answer">Answer a</div>
+            <div id="b" class="answer">Answer b</div>
+            <div id="c" class="answer">Answer c</div>
+            <div id="d" class="answer">Answer d</div>
+          </dive>
+          <div id="dbutton">
+            <input id="inputAn" type="text" placeholder="Enter You Answer" />
+            <button>OK</button>
+            <button>Next Question</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
   </body>
 </html>
