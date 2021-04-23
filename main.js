@@ -83,15 +83,15 @@ const changeBackG = (string) =>{
 
 
 const nextQ = () => {
-  // a.style.backgroundColor = "white"
-  // b.style.backgroundColor = "white"
-  // c.style.backgroundColor = "white"
-  // d.style.backgroundColor = "white"
+  a.style.backgroundColor = "white"
+  b.style.backgroundColor = "white"
+  c.style.backgroundColor = "white"
+  d.style.backgroundColor = "white"
  
-//  if(inputA.innerHTML === Q[indexQ][Object.keys(Q[indexQ])]){
+//  if(inputAn.value == Q[indexQ][Object.keys(Q[indexQ])]){
 //   points += 1;
 //     point.innerHTML = points;
-//  }
+ //}
 
   setTimeout (function(){
     

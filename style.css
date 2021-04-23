@@ -78,7 +78,7 @@ li a:hover {
 #danswers {
   display: grid;
   grid-template-columns: 2fr 2fr;
-  margin-left: 15%;
+  margin-left: 11%;
 }
 .answer {
   height: 100px;
@@ -93,16 +93,16 @@ li a:hover {
   font-weight: bold;
 }
 #a {
-  margin: 20px;
+   margin: 3%; 
 }
 #b {
-  margin: 20px;
+  margin: 3%;
 }
 #c {
-  margin: 20px;
+  margin: 3%;
 }
 #d {
-  margin: 20px;
+  margin: 3%;
 }
 #dquestion {
 }
@@ -116,10 +116,11 @@ p {
   text-align: center;
   font-weight: bold;
   color: rgb(255, 255, 255);
-  height: 130px;
+  /* height: px; */
   margin-left: 10% ;
   margin-right: 10%;
-  padding-top: 25px;
+  padding: 25px;
+  
 }
 button {
   height: 70px;
@@ -144,7 +145,5 @@ input{
   border-right: 7px solid white ;
   text-align: center;
 }
-
-
 /* ====> create  <==== */
 /* ====> div <==== */
