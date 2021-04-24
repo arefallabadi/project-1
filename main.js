@@ -101,14 +101,14 @@ if(indexQ !== 0) {indexQ -=1}
 if(inputAn.value === Q[indexQ][Object.keys(Q[indexQ])[0]]){
   points += 1;
     point.innerHTML = points;
-    setTimeout (function(){
+    setTimeout (()=>{
     a.style.backgroundColor = "green"
   b.style.backgroundColor = "red"
   c.style.backgroundColor = "red"
   d.style.backgroundColor = "red"
        },500)
- }else{
-  setTimeout (function(){
+ }else if(indexQ>0){
+  setTimeout (()=>{
     a.style.backgroundColor = "green"
   b.style.backgroundColor = "red"
   c.style.backgroundColor = "red"
@@ -118,26 +118,26 @@ if(inputAn.value === Q[indexQ][Object.keys(Q[indexQ])[0]]){
  
 
  indexQ +=1
-  setTimeout (function(){
+  setTimeout (()=>{
     
-    if(indexQ +1<Q.length ){q.innerHTML = "";
+    if(indexQ +1<=Q.length ){q.innerHTML = "";
     
     q.innerHTML = Object.keys(Q[indexQ])[0];
     console.log(q.innerHTML)
-    if (indexQ < 6) {
+    if (indexQ <= 6) {
       a.innerHTML = Q[indexQ][Object.keys(Q[indexQ])];
       b.innerHTML = randomAnswerN();
       c.innerHTML = randomAnswerN();
       d.innerHTML = randomAnswerN();
     }
     if (indexQ <= Q.length && indexQ>6) {
-      a.innerHTML = randomAnswerY();
+      a.innerHTML = Q[indexQ][Object.keys(Q[indexQ])];
       b.innerHTML = randomAnswerY();
-      c.innerHTML = Q[indexQ][Object.keys(Q[indexQ])];
+      c.innerHTML = randomAnswerY();
       d.innerHTML = randomAnswerY();
     }}
     else{
-      q.innerHTML = "====> The Game Was End <===="
+      q.innerHTML = "==> The Game Was End <=="
       a.innerHTML = "Good Luck";
       b.innerHTML = "Good Luck";
       c.innerHTML = "Good Luck";
@@ -158,7 +158,12 @@ if(inputAn.value === Q[indexQ][Object.keys(Q[indexQ])[0]]){
   //   q.innerHTML = Object.keys(Q[i]);
   //   a.innerHTML = Q[i][Object.keys(Q[i])];
   // }
+ 
 };
+
+// if(timer.value=== "1 seconds"){
+//   newQ()
+// }
 
 
 // const inputA = () => {
@@ -177,13 +182,41 @@ if(inputAn.value === Q[indexQ][Object.keys(Q[indexQ])[0]]){
 let lengthQ = 0 
 const saveNum =()=>{
   lengthQ = inputNumber.value
-Q =[]
+Q =[{}]
 }
 // const newQ = document.querySelector("#newQ")
 // const correct = document.querySelector("#correct")
 const addQ =()=>{
   lengthQ -=1
-  newQuestion = newQ.value
-  correctAnswer = correct.value
-  Q.push({newQuestion : correctAnswer})
+  // newQuestion = newquestion.value
+  // correctAnswer = correct.value
+  // Q.push({ newQuestion : correctAnswer})
+  let obj = {}
+  key = newquestion.value
+  obj[key] = correct.value
+  Q.push(obj)
+}
+
+
+function timedText() {
+  setTimeout(()=>{ timer.value="20 seconds" }, 3000);
+  setTimeout(()=>{ timer.value="19 seconds" }, 4000);
+  setTimeout(()=>{ timer.value="18 seconds" }, 5000);
+  setTimeout(()=>{ timer.value="17 seconds" }, 6000);
+  setTimeout(()=>{ timer.value="16 seconds" }, 7000);
+  setTimeout(()=>{ timer.value="15 seconds" }, 8000);
+  setTimeout(()=>{ timer.value="14 seconds" }, 9000);
+  setTimeout(()=>{ timer.value="13 seconds" }, 10000);
+  setTimeout(()=>{ timer.value="12 seconds" }, 11000);
+  setTimeout(()=>{ timer.value="11 seconds" }, 12000);
+  setTimeout(()=>{ timer.value="10 seconds" }, 13000);
+  setTimeout(()=>{ timer.value="9 seconds" }, 14000);
+  setTimeout(()=>{ timer.value="8 seconds" }, 15000);
+  setTimeout(()=>{ timer.value="7 seconds" }, 16000);
+  setTimeout(()=>{ timer.value="6 seconds" }, 17000);
+  setTimeout(()=>{ timer.value="5 seconds" }, 18000);
+  setTimeout(()=>{ timer.value="4 seconds" }, 19000);
+  setTimeout(()=>{ timer.value="3 seconds" }, 20000);
+  setTimeout(()=>{ timer.value="2 seconds" }, 21000);
+  setTimeout(()=>{ timer.value="1 seconds" }, 22000);
 }

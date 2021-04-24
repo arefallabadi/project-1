@@ -19,6 +19,7 @@
         <div id="page">
           <dive id="dquestion">
             <p id="q">The Question</p>
+            <input readonly type="text" placeholder="Timer" id="timer">
             <button id="dpoint">Your Point</button>
           </dive>
           <dive id="danswers">
@@ -28,9 +29,9 @@
             <div onclick="changeBackG('d')" style="align-items: center;" id="d" class="answer">Answer d</div>
           </dive>
           <div id="dbutton">
-            <input readonly id="inputAn" type="text" placeholder="Enter You Answer" />
+            <input id="inputAn" type="text" placeholder="Enter You Answer" />
             <!-- <button onclick="inputA()">OK</button> -->
-            <button id="bn" onclick="nextQ()">Next Question</button>
+            <button id="bn" onclick="nextQ(timedText())">Next Question</button>
           </div>
         </div>
       </div>
@@ -50,13 +51,14 @@ const d = document.querySelector("#d");
 const bn = document.querySelector("#bn")
 const inputAn = document.querySelector("#inputAn");
 const point = document.querySelector("#dpoint");
+var timer = document.querySelector("#timer");
   //     q.innerHTML = "";
   // q.innerHTML = Object.keys(Q[0]);
   // a.innerHTML = Q[0][Object.keys(Q[0])];
   // b.innerHTML = randomAnswerN();
   // c.innerHTML = randomAnswerN();
   // d.innerHTML = randomAnswerN();
-   nextQ()
+   nextQ(timedText())
    
     </script>
   </body>
