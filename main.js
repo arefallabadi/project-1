@@ -77,7 +77,6 @@ const nextQ = () => {
   c.style.backgroundColor = "white";
   d.style.backgroundColor = "white";
 
-  console.log(Q[indexQ]);
   if (indexQ !== 0) {
     indexQ -= 1;
   }
@@ -107,7 +106,6 @@ const nextQ = () => {
       q.innerHTML = "";
 
       q.innerHTML = Object.keys(Q[indexQ])[0];
-      console.log(q.innerHTML);
       if (indexQ <= 6) {
         a.innerHTML = Q[indexQ][Object.keys(Q[indexQ])];
         b.innerHTML = randomAnswerN();
@@ -137,21 +135,15 @@ const nextQ = () => {
   }, 2000);
 };
 
-// const inputNumber = document.querySelector("#inputNumber")
-// const done = document.querySelector("#done")
 let lengthQ = 0;
 const saveNum = () => {
   lengthQ = inputNumber.value;
   Q = [{}];
 };
-// const newQ = document.querySelector("#newQ")
-// const correct = document.querySelector("#correct")
+
 let x;
 const addQ = () => {
   lengthQ -= 1;
-  // newQuestion = newquestion.value
-  // correctAnswer = correct.value
-  // Q.push({ newQuestion : correctAnswer})
   let obj = {};
   key = newquestion.value;
   obj[key] = correct.value;
@@ -164,24 +156,24 @@ const addQ = () => {
   x = JSON.parse(localStorage.getItem("questions"));
 };
 
-const clearTimer=()=> {
+const clearTimer = () => {
   clearTimeout(timer_2);
-}
-let timer_1
+};
+let timer_1;
 const timers = () => {
   let time = 0;
   let timer_2 = setTimeout(() => {
     timer_1 = setInterval(function () {
       if (time === 20) {
         clearInterval(timer_1);
-         nextQ(timers())
+        nextQ(timers());
       }
       timer.value = 20 - time;
       time += 1;
     }, 1000);
   }, 1000);
-  //     clearInterval(timer_1);
 };
+
 const newGame = () => {
   if (x !== undefined) Q = x;
 };
@@ -190,15 +182,15 @@ const reSit = () => {
   setTimeout(() => alert("The Game Was Resit"), 2000);
 };
 
-const x = document.getElementById("audio");
-function playAudio() {
-  x.play();
-}
-function pauseAudio() {
-  x.pause();
-}
+const z = document.getElementById("audio");
+const playAudio = () => {
+  z.play();
+};
+const pauseAudio = () => {
+  z.pause();
+};
 
-const test =()=>{
-  clearInterval(timer_1)
-  nextQ(timers())
-}
+const nextQuestion = () => {
+  clearInterval(timer_1);
+  nextQ(timers());
+};
