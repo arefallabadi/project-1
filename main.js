@@ -1,4 +1,9 @@
-let Q = [
+let Q
+
+if(!!localStorage.getItem("questions")){
+  Q =  JSON.parse(localStorage.getItem("questions"))
+
+}else{Q= [
   {},
   { "From how many colors a rainbow is made of ?": "7" },
   { "How many letters in the English language ?": "26" },
@@ -10,7 +15,12 @@ let Q = [
   { "When did the Second World War take place ?": "1939" },
   { "When did America gain independence ?": "1776" },
   { "When was the first time the Al-Aqsa Mosque was burned?": "1969" },
-];
+];}
+
+
+
+ 
+
 
 let answerN = [10, 0, 1, 22, 35, , 11, 13, 36, 45, 6];
 let answerY = [1999, 1545, 2003, 1852, 1962, 1400, 1752, 1325, 1977, 1235];
@@ -33,24 +43,10 @@ const randomAnswerY = function (array) {
   }
 };
 
-
-
 let indexQ = 0;
-// indexQ += 1;
+
 const play = () => {
-
-  // q.innerHTML = "";
-  // q.innerHTML = Object.keys(Q[0]);
-  // a.innerHTML = Q[0][Object.keys(Q[0])];
-  // b.innerHTML = randomAnswerN();
-  // c.innerHTML = randomAnswerN();
-  // d.innerHTML = randomAnswerN();
-
 };
-// const inputAn = document.querySelector("#inputAn");
-// const point = document.querySelector("#dpoint");
-// let points = 0;
-
 const changeBackG = (string) =>{
   if(string === "a"){
     a.style.backgroundColor = "yellow"
@@ -89,12 +85,6 @@ const nextQ = () => {
   c.style.backgroundColor = "white"
   d.style.backgroundColor = "white"
 
-
-
-  // console.log ("a", [Object.keys(Q[indexQ])])
-//  console.log("b" , Q[indexQ+1])
-//   console.log( Q[indexQ][Object.keys(Q[indexQ])[0]])
-// const point = document.querySelector("#dpoint");
 console.log(Q[indexQ])
 if(indexQ !== 0) {indexQ -=1}
 
@@ -153,29 +143,9 @@ if(inputAn.value === Q[indexQ][Object.keys(Q[indexQ])[0]]){
     
   },2000)
   
-
-  // for (let i = 0; i < Q.length; i++) {
-  //   q.innerHTML = Object.keys(Q[i]);
-  //   a.innerHTML = Q[i][Object.keys(Q[i])];
-  // }
  
 };
 
-// if(timer.value=== "1 seconds"){
-//   newQ()
-// }
-
-
-// const inputA = () => {
-//   const inputAn = document.querySelector("#inputAn");
-// let points = 0;
-// console.log(inputAn.value)
-//   if (inputAn.value == Q[indexQ][Object.keys(Q[indexQ])[0]]) {
-//     console.log(points)
-//     points += 1;
-//     point.innerHTML = points;}
-
-// };
 
 // const inputNumber = document.querySelector("#inputNumber")  
 // const done = document.querySelector("#done")
@@ -186,6 +156,7 @@ Q =[{}]
 }
 // const newQ = document.querySelector("#newQ")
 // const correct = document.querySelector("#correct")
+let x
 const addQ =()=>{
   lengthQ -=1
   // newQuestion = newquestion.value
@@ -194,7 +165,13 @@ const addQ =()=>{
   let obj = {}
   key = newquestion.value
   obj[key] = correct.value
+  console.log(newquestion.value)
+  console.log(correct.value)
+  console.log(obj)
   Q.push(obj)
+  console.log(Q)
+  localStorage.setItem("questions",JSON.stringify(Q))
+  x = JSON.parse(localStorage.getItem("questions"))
 }
 
 
@@ -220,3 +197,21 @@ function timedText() {
   setTimeout(()=>{ timer.value="2 seconds" }, 21000);
   setTimeout(()=>{ timer.value="1 seconds" }, 22000);
 }
+
+const newGame =()=>{
+  if (x !== undefined)
+  Q=x
+}
+
+// const newGame = ()=>{
+//   if (questions !== undefined){
+    
+//   }
+
+// }
+
+const reSit =()=>{
+  localStorage.removeItem("questions")
+  setTimeout(()=>alert("The Game Was Resit"),2000)
+} 
+// localStorage.removeItem("questions")

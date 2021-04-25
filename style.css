@@ -8,10 +8,15 @@ body {
 .title {
   color: #ffffff;
   font-size: 35px;
+  font-family:cursive;
 }
 nav {
   /* background-color: rgb(95, 15, 55); */
   margin: 50px;
+  font-family:cursive;
+}
+h1{
+  font-family:cursive;
 }
 
 /* ====> ul && li <==== */
@@ -61,6 +66,7 @@ li a:hover {
   height: 80%;
   margin-left: 10%;
   text-align: center;
+  font-family:cursive;
 }
 
 /* ====> quiz page <==== */
@@ -93,15 +99,19 @@ li a:hover {
   font-weight: bold;
 }
 #a {
+  font-family:cursive;
    margin: 3%; 
 }
 #b {
+  font-family:cursive;
   margin: 3%;
 }
 #c {
+  font-family:cursive;
   margin: 3%;
 }
 #d {
+  font-family:cursive;
   margin: 3%;
 }
 #dquestion {
@@ -120,6 +130,7 @@ p {
   margin-left: 10% ;
   margin-right: 10%;
   padding: 25px;
+  font-family:cursive;
   
 }
 button {
@@ -132,6 +143,7 @@ button {
   font-size: 20px;
   background-color: rgb(95, 15, 55);
   margin: 20px;
+  font-family:cursive;
 }
 input{
   height: 40px;
@@ -144,6 +156,8 @@ input{
   border-left: 7px solid white;
   border-right: 7px solid white ;
   text-align: center;
+  font-family:cursive;
 }
 /* ====> create  <==== */
 /* ====> div <==== */
+

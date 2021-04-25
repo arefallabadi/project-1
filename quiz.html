@@ -7,7 +7,7 @@
     <title>Play Quiz</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
-  <body>
+  <body onload="newGame()">
     <script src="main.js"></script>
     <div style="margin: 5%">
       <div class="main">
@@ -29,7 +29,7 @@
             <div onclick="changeBackG('d')" style="align-items: center;" id="d" class="answer">Answer d</div>
           </dive>
           <div id="dbutton">
-            <input id="inputAn" type="text" placeholder="Enter You Answer" />
+            <input id="inputAn" type="text" placeholder="Your Answer" />
             <!-- <button onclick="inputA()">OK</button> -->
             <button id="bn" onclick="nextQ(timedText())">Next Question</button>
           </div>
@@ -37,11 +37,6 @@
       </div>
     </div>
     <script>
-//        q = document.querySelector("#q");
-//  a = document.querySelector("#a");
-//  b = document.querySelector("#b");
-//  c = document.querySelector("#c");
-//  d = document.querySelector("#d");
 
 const q = document.querySelector("#q");
 const a = document.querySelector("#a");
@@ -51,15 +46,14 @@ const d = document.querySelector("#d");
 const bn = document.querySelector("#bn")
 const inputAn = document.querySelector("#inputAn");
 const point = document.querySelector("#dpoint");
-var timer = document.querySelector("#timer");
-  //     q.innerHTML = "";
-  // q.innerHTML = Object.keys(Q[0]);
-  // a.innerHTML = Q[0][Object.keys(Q[0])];
-  // b.innerHTML = randomAnswerN();
-  // c.innerHTML = randomAnswerN();
-  // d.innerHTML = randomAnswerN();
+const timer = document.querySelector("#timer");
+
+
+
    nextQ(timedText())
    
+  
+
     </script>
   </body>
 </html>
