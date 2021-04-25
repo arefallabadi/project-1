@@ -7,7 +7,8 @@
     <title>Play Quiz</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
-  <body onload="newGame()">
+  <body>
+    <audio id="audio" src="sound.mp3" type=""></audio>
     <script src="main.js"></script>
     <div style="margin: 5%">
       <div class="main">
@@ -15,45 +16,69 @@
           <h1 class="title">
             <font color="#000">Q</font>uiz <font color="#000">G</font>ame
           </h1>
+          <button onclick="">Play sound</button>
+          <button onclick="">Pause sound</button>
         </div>
         <div id="page">
           <dive id="dquestion">
             <p id="q">The Question</p>
-            <input readonly type="text" placeholder="Timer" id="timer">
+            <input readonly type="text" placeholder="Timer" id="timer" />
             <button id="dpoint">Your Point</button>
           </dive>
           <dive id="danswers">
-            <div onclick="changeBackG('a')" style="align-items: center;" id="a" class="answer">Answer a</div>
-            <div onclick="changeBackG('b')" style="align-items: center;" id="b" class="answer">Answer b</div>
-            <div onclick="changeBackG('c')" style="align-items: center;" id="c" class="answer">Answer c</div>
-            <div onclick="changeBackG('d')" style="align-items: center;" id="d" class="answer">Answer d</div>
+            <div
+              onclick="changeBackG('a')"
+              style="align-items: center"
+              id="a"
+              class="answer"
+            >
+              Answer a
+            </div>
+            <div
+              onclick="changeBackG('b')"
+              style="align-items: center"
+              id="b"
+              class="answer"
+            >
+              Answer b
+            </div>
+            <div
+              onclick="changeBackG('c')"
+              style="align-items: center"
+              id="c"
+              class="answer"
+            >
+              Answer c
+            </div>
+            <div
+              onclick="changeBackG('d')"
+              style="align-items: center"
+              id="d"
+              class="answer"
+            >
+              Answer d
+            </div>
           </dive>
           <div id="dbutton">
             <input id="inputAn" type="text" placeholder="Your Answer" />
             <!-- <button onclick="inputA()">OK</button> -->
-            <button id="bn" onclick="nextQ(timedText())">Next Question</button>
+            <button id="bn" onclick="test()">Next Question</button>
           </div>
         </div>
       </div>
     </div>
     <script>
+      const q = document.querySelector("#q");
+      const a = document.querySelector("#a");
+      const b = document.querySelector("#b");
+      const c = document.querySelector("#c");
+      const d = document.querySelector("#d");
+      const bn = document.querySelector("#bn");
+      const inputAn = document.querySelector("#inputAn");
+      const point = document.querySelector("#dpoint");
+      const timer = document.querySelector("#timer");
 
-const q = document.querySelector("#q");
-const a = document.querySelector("#a");
-const b = document.querySelector("#b");
-const c = document.querySelector("#c");
-const d = document.querySelector("#d");
-const bn = document.querySelector("#bn")
-const inputAn = document.querySelector("#inputAn");
-const point = document.querySelector("#dpoint");
-const timer = document.querySelector("#timer");
-
-
-
-   nextQ(timedText())
-   
-  
-
+      nextQ(timers());
     </script>
   </body>
 </html>

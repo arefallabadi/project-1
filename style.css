@@ -1,5 +1,6 @@
 /* ====> main page <==== */
 body {
+  /* background-image:url(https://media.gemini.media/img/large/2020/7/27/2020_7_27_12_12_38_107.jpg); */
   height: 100%;
   background-color: rgb(54, 58, 58);
   background-repeat: no-repeat;
@@ -8,15 +9,15 @@ body {
 .title {
   color: #ffffff;
   font-size: 35px;
-  font-family:cursive;
+  font-family: cursive;
 }
 nav {
   /* background-color: rgb(95, 15, 55); */
   margin: 50px;
-  font-family:cursive;
+  font-family: cursive;
 }
-h1{
-  font-family:cursive;
+h1 {
+  font-family: cursive;
 }
 
 /* ====> ul && li <==== */
@@ -39,6 +40,7 @@ li a:hover {
   background-color: white;
   color: rgb(95, 15, 55);
   border-radius: 50px;
+  text-decoration: black underline;
 }
 
 /*====> div <====*/
@@ -66,12 +68,12 @@ li a:hover {
   height: 80%;
   margin-left: 10%;
   text-align: center;
-  font-family:cursive;
+  font-family: cursive;
 }
 
 /* ====> quiz page <==== */
 
-.main{
+.main {
   text-align: center;
   margin-top: 50px;
 }
@@ -99,19 +101,19 @@ li a:hover {
   font-weight: bold;
 }
 #a {
-  font-family:cursive;
-   margin: 3%; 
+  font-family: cursive;
+  margin: 3%;
 }
 #b {
-  font-family:cursive;
+  font-family: cursive;
   margin: 3%;
 }
 #c {
-  font-family:cursive;
+  font-family: cursive;
   margin: 3%;
 }
 #d {
-  font-family:cursive;
+  font-family: cursive;
   margin: 3%;
 }
 #dquestion {
@@ -127,11 +129,10 @@ p {
   font-weight: bold;
   color: rgb(255, 255, 255);
   /* height: px; */
-  margin-left: 10% ;
+  margin-left: 10%;
   margin-right: 10%;
   padding: 25px;
-  font-family:cursive;
-  
+  font-family: cursive;
 }
 button {
   height: 70px;
@@ -143,9 +144,9 @@ button {
   font-size: 20px;
   background-color: rgb(95, 15, 55);
   margin: 20px;
-  font-family:cursive;
+  font-family: cursive;
 }
-input{
+input {
   height: 40px;
   margin-right: 50px;
   font-weight: bold;
@@ -154,10 +155,9 @@ input{
   border-radius: 50px;
   border-bottom: 7px solid black;
   border-left: 7px solid white;
-  border-right: 7px solid white ;
+  border-right: 7px solid white;
   text-align: center;
-  font-family:cursive;
+  font-family: cursive;
 }
 /* ====> create  <==== */
 /* ====> div <==== */
-
