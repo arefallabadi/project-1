@@ -139,6 +139,7 @@ let lengthQ = 0;
 const saveNum = () => {
   lengthQ = inputNumber.value;
   Q = [{}];
+  inputNumber.value =""
 };
 
 let x;
