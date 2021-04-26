@@ -147,13 +147,11 @@ const addQ = () => {
   let obj = {};
   key = newquestion.value;
   obj[key] = correct.value;
-  console.log(newquestion.value);
-  console.log(correct.value);
-  console.log(obj);
   Q.push(obj);
-  console.log(Q);
   localStorage.setItem("questions", JSON.stringify(Q));
   x = JSON.parse(localStorage.getItem("questions"));
+  newquestion.value = ""
+  correct.value = ""
 };
 
 const clearTimer = () => {
