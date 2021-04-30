@@ -20,7 +20,7 @@ if (!!localStorage.getItem("questions")) {
 let answerN = [10, 0, 1, 22, 35, , 11, 13, 36, 45, 6];
 let answerY = [1999, 1545, 2003, 1852, 1962, 1400, 1752, 1325, 1977, 1235];
 
-const randomAnswerN = function (array) {
+const randomAnswerN =(array)=> {
   array = answerN[Math.floor(Math.random() * 10)];
   if (array !== undefined) {
     return array;
@@ -29,7 +29,7 @@ const randomAnswerN = function (array) {
   }
 };
 
-const randomAnswerY = function (array) {
+const randomAnswerY = (array) => {
   array = answerY[Math.floor(Math.random() * 10)];
   if (array !== undefined) {
     return array;
@@ -176,7 +176,7 @@ const timers = () => {
 const newGame = () => {
   if (x !== undefined) Q = x;
 };
-const reSit = () => {
+const reSet = () => {
   localStorage.removeItem("questions");
   setTimeout(() => alert("The Game Was Resit"), 2000);
 };
